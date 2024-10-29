@@ -12,6 +12,12 @@ function showSlide(index) {
     });
 }
 
+// Hàm chuyển ảnh khi nhấp vào hình thu nhỏ
+function changeSlide(index) {
+    currentIndex = index;
+    showSlide(currentIndex);
+}
+
 // Sự kiện khi nhấn nút "Next" để chuyển sang ảnh tiếp theo
 document.getElementById('next').onclick = function() {
     currentIndex = (currentIndex + 1) % items.length;

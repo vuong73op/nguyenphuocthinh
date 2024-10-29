@@ -13,26 +13,34 @@
         <div id="slide">
             <div class="item active" style="background-image: url(anh1.jpg);">
                 <div class="content">
-                    <div class="name">LUNDEV</div>
-                    <div class="des">Tinh ru anh di chay pho, chua kip chay pho thi anh chay mat tieu</div>
+                    <div class="name">BO</div>
+                    <div class="des">Tên của mình là Nguyen Phuoc Thinh Nha</div>
                     <button>See more</button>
                 </div>
             </div>
             <div class="item" style="background-image: url(anh2.jpg);">
                 <div class="content">
-                    <div class="name">LUNDEV</div>
+                    <div class="name">BO</div>
                     <div class="des">Anh này dễ thương quá!</div>
                     <button>See more</button>
                 </div>
             </div>
             <div class="item" style="background-image: url(anh3.jpg);">
                 <div class="content">
-                    <div class="name">LUNDEV</div>
+                    <div class="name">BO</div>
                     <div class="des">Đây là ảnh thứ ba!</div>
                     <button>See more</button>
                 </div>
             </div>
         </div>
+        
+        <!-- Thêm hình thu nhỏ bên dưới -->
+        <div class="thumbnail-container">
+            <img src="anh1.jpg" class="thumbnail" onclick="changeSlide(0)">
+            <img src="anh2.jpg" class="thumbnail" onclick="changeSlide(1)">
+            <img src="anh3.jpg" class="thumbnail" onclick="changeSlide(2)">
+        </div>
+
         <div class="buttons">
             <button id="prev"><i class="fa-solid fa-angle-left"></i></button>
             <button id="next"><i class="fa-solid fa-angle-right"></i></button>

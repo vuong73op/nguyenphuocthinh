@@ -1,6 +1,6 @@
-/* Thêm hình ảnh nền cho body */
+/* Đặt các thuộc tính cơ bản */
 body {
-    background: url('anh9.jpg') no-repeat center center fixed; /* Thay 'background.jpg' bằng tên tệp hình nền của bạn */
+    background: url('anh9.jpg') no-repeat center center fixed;
     background-size: cover;
     margin: 0;
     font-family: Arial, sans-serif;
@@ -32,7 +32,7 @@ body {
     background-size: cover;
     background-position: center;
     position: absolute;
-    transition: opacity 0.5s ease-in-out; /* Hiệu ứng mờ dần */
+    transition: opacity 0.5s ease-in-out;
     opacity: 0;
     visibility: hidden;
 }
@@ -41,6 +41,28 @@ body {
     opacity: 1;
     visibility: visible;
     z-index: 1;
+}
+
+/* Thêm CSS cho hình thu nhỏ */
+.thumbnail-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.thumbnail {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.thumbnail:hover {
+    transform: scale(1.1);
+    border: 2px solid #007BFF;
 }
 
 .content {
