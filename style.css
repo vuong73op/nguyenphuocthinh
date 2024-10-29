@@ -190,4 +190,24 @@ body {
 }.buttons button:hover{
     background-color: #bac383;
 }
-  
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+        max-width: none; /* Loại bỏ max-width */
+    }
+    .item {
+        width: 90%;
+        max-width: 300px;
+        margin: 0 auto 20px;
+        position: relative; /* Đảm bảo không bị chồng lên nhau */
+    }
+    #slide {
+        display: flex;
+        flex-direction: column; /* Sắp xếp theo cột trên di động */
+        overflow-x: hidden;
+    }
+    .buttons {
+        display: none; /* Ẩn nút điều khiển trên di động */
+    }
+}
