@@ -1,16 +1,16 @@
+/* Đặt các thuộc tính cơ bản */
 body {
-    background-color: #f0f0f0;
+    background-color: #f9f9f9;
     margin: 0;
     font-family: Arial, sans-serif;
 }
 
 .container {
     width: 100%;
-    max-width: 100%;
+    max-width: 420px; /* Giới hạn chiều rộng để cân đối trên điện thoại */
     margin: 0 auto;
-    padding: 10px;
+    padding: 0;
     box-sizing: border-box;
-    overflow: hidden;
 }
 
 #slide {
@@ -22,27 +22,30 @@ body {
 
 .item {
     min-width: 100%;
-    height: 500px; /* Đặt chiều cao lớn hơn để phù hợp với chiều dọc của điện thoại */
+    height: 500px; /* Đặt chiều cao lớn hơn để phù hợp với màn hình điện thoại */
     background-size: cover;
     background-position: center;
     position: relative;
     transition: transform 0.5s ease;
+    border-radius: 10px; /* Tạo góc bo tròn cho hình ảnh */
+    overflow: hidden;
 }
 
+/* Phần nội dung hiển thị trên ảnh */
 .content {
     position: absolute;
-    bottom: 10px;
+    bottom: 20px;
     left: 10px;
     right: 10px;
-    color: white;
-    background: rgba(0, 0, 0, 0.6);
-    padding: 8px;
-    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 10px;
     text-align: center;
+    color: #fff;
 }
 
 .name {
-    font-size: 18px;
+    font-size: 22px;
     font-weight: bold;
     margin: 0;
 }
@@ -55,16 +58,17 @@ body {
 button {
     display: block;
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     margin-top: 10px;
     color: white;
     background-color: #007BFF;
     border: none;
     border-radius: 5px;
-    font-size: 14px;
+    font-size: 16px;
     cursor: pointer;
 }
 
+/* Phần nút điều hướng */
 .buttons {
     display: flex;
     justify-content: center;
@@ -73,8 +77,8 @@ button {
 }
 
 .buttons button {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background: #ffffff;
     border: 1px solid #555;
@@ -82,29 +86,36 @@ button {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    font-size: 18px;
+    color: #555;
+    transition: background-color 0.3s;
 }
 
 .buttons button:hover {
     background-color: #bac383;
 }
 
-/* Điều chỉnh form cho thiết bị nhỏ hơn */
+/* Media query cho các thiết bị nhỏ */
 @media (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
     .item {
-        height: 400px; /* Giảm chiều cao cho màn hình điện thoại nhỏ */
+        height: 400px; /* Giảm chiều cao cho màn hình nhỏ */
     }
     .name {
-        font-size: 16px;
+        font-size: 18px;
     }
     .des {
         font-size: 12px;
     }
     button {
-        font-size: 12px;
-        padding: 6px;
+        font-size: 14px;
+        padding: 8px;
     }
     .buttons button {
-        width: 25px;
-        height: 25px;
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
     }
 }
