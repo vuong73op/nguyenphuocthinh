@@ -114,4 +114,48 @@
 }.buttons button:hover{
     background-color: #bac383;
 }
-  
+/* Mobile Responsive Styles */
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        box-shadow: none;
+    }
+
+    #slide {
+        display: flex;
+        overflow-x: scroll;
+        width: 100%;
+    }
+
+    .item {
+        width: 80%;
+        height: auto;
+        border-radius: 10px;
+        margin-right: 10px;
+        box-shadow: none;
+    }
+
+    .item .content {
+        width: auto;
+        left: 10px;
+    }
+
+    .buttons {
+        display: none; /* Ẩn các nút chuyển slide trên điện thoại */
+    }
+
+    .item:nth-child(1),
+    .item:nth-child(2),
+    .item:nth-child(3),
+    .item:nth-child(4),
+    .item:nth-child(5) {
+        opacity: 1;
+        position: relative;
+        transform: translate(0, 0);
+        top: 0;
+        left: 0;
+    }
+}
+ 
