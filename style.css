@@ -1,55 +1,61 @@
 body {
     background-color: #eaeaea;
     margin: 0;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .container {
     position: relative;
     margin: 0 auto;
     width: 90%;
-    max-width: 600px; /* Adjusted for smaller screens */
+    max-width: 600px;
     padding: 10px;
     background-color: #f5f5f5;
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
 #slide {
     display: flex;
-    flex-wrap: nowrap;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     gap: 10px;
-    margin: 20px 0;
-    padding: 0;
+    padding: 10px 0;
+    width: 100%;
+    justify-content: center;
 }
 
 .item {
     flex: 0 0 auto;
     width: 80%;
     max-width: 200px;
-    height: auto;
+    height: 250px; /* Reduced height for mobile */
     background-position: center;
     background-size: cover;
     border-radius: 10px;
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
     scroll-snap-align: center;
+    position: relative;
 }
 
 .item .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    padding: 5px;
+    text-align: center;
     color: #333;
     font-family: Arial, sans-serif;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background for readability */
+    border-radius: 5px;
 }
 
 .buttons {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 15px;
     padding: 10px 0;
 }
 
@@ -68,17 +74,16 @@ body {
 @media (max-width: 768px) {
     .container {
         width: 100%;
-        padding: 10px;
-        box-shadow: none;
+        padding: 5px;
     }
 
     .item {
-        width: 90%;
+        width: 100%;
         max-width: none;
         height: auto;
     }
 
     .buttons {
-        gap: 5px;
+        gap: 10px;
     }
 }
