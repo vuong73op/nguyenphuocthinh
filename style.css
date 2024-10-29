@@ -1,6 +1,7 @@
-/* Đặt các thuộc tính cơ bản */
+/* Thêm hình ảnh nền cho body */
 body {
-    background-color: #f9f9f9;
+    background: url('anh9.jpg') no-repeat center center fixed; /* Thay background.jpg bằng tên tệp hình ảnh nền của bạn */
+    background-size: cover;
     margin: 0;
     font-family: Arial, sans-serif;
 }
@@ -8,9 +9,12 @@ body {
 .container {
     width: 100%;
     max-width: 420px; /* Giới hạn chiều rộng để cân đối trên điện thoại */
-    margin: 0 auto;
+    margin: 20px auto; /* Thêm khoảng cách trên dưới */
     padding: 0;
     box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.85); /* Tạo lớp mờ trắng để nội dung dễ đọc trên nền ảnh */
+    border-radius: 10px; /* Bo góc nhẹ */
+    overflow: hidden;
 }
 
 #slide {
